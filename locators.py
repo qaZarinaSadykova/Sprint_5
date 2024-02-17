@@ -10,7 +10,7 @@ class TestLocators:
     EMAIL_INPUT = (By.XPATH, "//label[text()='Email']/following-sibling::input")
 
     # Локатор для отображения пароля
-    EYE_BUTTON = ()
+    EYE_BUTTON = (By.XPATH, "(//*[name()='svg' and @fill='#F2F2F3'])[1]")
 
     # Локатор для поля ввода пароля
     PASSWORD_INPUT = (By.XPATH, "//input[@name = 'Пароль']")
@@ -42,6 +42,9 @@ class TestLocators:
 
     # Локатор для заголовка Соберите булки
     BUILD_BURGER_TITLE = (By.XPATH, "//h1[text() = 'Соберите бургер']")
+
+    # Локатор для активной кнопки в блоке конструктора
+    ACTIVE_BUTTON = (By.XPATH, "//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']")
 
     # Локатор для булок
     BUNS_BLOCK = (By.XPATH, "//span[text() = 'Булки']")

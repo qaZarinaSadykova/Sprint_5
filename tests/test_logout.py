@@ -1,11 +1,10 @@
-import pytest
+
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
-from conftest import driver
+from conftest import driver, email, password
 from locators import TestLocators
 
 
-@pytest.mark.parametrize("email, password", [("zarina_sadykova_5_555@yandex.ru", "555zar")])
 class TestLogout(TestLocators):
     def test_logout_positive(self, driver, email, password):
         # Выход из приложения в личном кабинете
